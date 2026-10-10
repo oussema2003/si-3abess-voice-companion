@@ -43,7 +43,6 @@
 
 ### Modules principaux
 - ✅ `piper_tts.py` : Module TTS simple et fonctionnel
-- ✅ `tts_manager.py` : Gestionnaire avancé (pour phase 2)
 
 ### Tests
 - ✅ `test_piper_simple.py`

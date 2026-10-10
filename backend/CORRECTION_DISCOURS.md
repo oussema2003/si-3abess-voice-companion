@@ -82,7 +82,7 @@ Pour tester les changements :
 
 ## Fichiers modifiés
 
-1. **main.py** :
+1. **main.py** et **si_3abess_personality.py** :
    - Suppression du découpage en phrases pour la synthèse
    - Augmentation de `max_tokens` (200 → 500)
    - Suppression de la limitation à 3 phrases

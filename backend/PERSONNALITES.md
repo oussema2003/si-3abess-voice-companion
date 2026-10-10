@@ -74,33 +74,34 @@ Farceur: "Aïe... Je suis là si tu veux en parler." (pas de blague car triste)
 
 ## Les 4 Publics
 
-### 1. Enfants 👶
-- **Vocabulaire** : Très simple
-- **Phrases** : Très courtes
+### 1. Jeunes 👶 (10-18 ans)
+- **Vocabulaire** : Simple et clair
+- **Phrases** : Courtes (1-3 phrases)
 - **Ton** : Doux, encourageant, patient
 - **Sécurité** :
   - Aucun sujet effrayant/violent/adulte
   - Ne demande jamais d'infos privées (nom complet, adresse, école)
   - Si danger → encourager à parler à un adulte
-- **Note** : Nécessite consentement parental
+- **Note** : Nécessite consentement parental pour les moins de 13 ans
 
-### 2. Ados 🎒
-- **Vocabulaire** : Naturel
-- **Ton** : Décontracté, sans morale
+### 2. Adultes 🎒 (18-65 ans)
+- **Vocabulaire** : Naturel et décontracté
+- **Ton** : Cool, sans jugement, sans morale
 - **Respect** : Ne pas infantiliser
 - **Sécurité** :
   - Vigilance sur détresse, harcèlement
   - Encourager à parler à adulte de confiance si besoin
 
-### 3. Adultes 👔
-- **Vocabulaire** : Mature
+### 3. Seniors 👔 (65+ ans)
+- **Vocabulaire** : Mature et varié
 - **Sujets** : Variés, avec nuance
 - **Limites** : Pas de conseils médicaux/juridiques/financiers professionnels
+- **Ton** : Égal à égal, respectueux
 
-### 4. Tout le monde 🌍
-- **Mode prudent** : Quand âge inconnu
+### 4. Tout le monde 🌍 (10-100 ans)
+- **Mode universel** : Pour tous les âges de 10 à 100 ans
 - **Vocabulaire** : Clair et simple
-- **Contenu** : Adapté à un adolescent
+- **Contenu** : Adapté à un adolescent (niveau de sécurité)
 - **Pas de** : Sujets adultes ou violents
 
 ## Utilisation API
@@ -111,7 +112,7 @@ Farceur: "Aïe... Je suis là si tu veux en parler." (pas de blague car triste)
 {
   "text": "Message de l'utilisateur",
   "caractere": "joueur",  // timide, joueur, sage, farceur
-  "public": "tout_le_monde",  // enfants, ados, adultes, tout_le_monde
+  "public": "tout_le_monde",  // jeunes, adultes, seniors, tout_le_monde
   "history": [...],
   "profile": {...}
 }
@@ -156,9 +157,9 @@ Quand l'utilisateur change de caractère :
 
 ### Phase 1 : Validation des publics
 Tester **Joueur** avec les 4 publics :
-- Joueur + Enfants
-- Joueur + Ados
+- Joueur + Jeunes
 - Joueur + Adultes
+- Joueur + Seniors
 - Joueur + Tout le monde
 
 ### Phase 2 : Validation des caractères
@@ -169,16 +170,16 @@ Tester **Tout le monde** avec les 4 caractères :
 - Farceur + Tout le monde
 
 ### Phase 3 : Combinaisons risquées
-- Farceur + Enfants (vérifier aucune blague inappropriée)
-- Farceur + Ados (vérifier contexte sensible)
-- Timide + Enfants (vérifier vocabulaire)
+- Farceur + Jeunes (vérifier aucune blague inappropriée)
+- Farceur + Adultes (vérifier contexte sensible)
+- Timide + Jeunes (vérifier vocabulaire)
 
 ### Critères de validation
 
 ✅ **Caractère reconnaissable** sans voir le choix  
 ✅ **Vocabulaire adapté** au public choisi  
 ✅ **Aucune blague** si humeur négative (tous caractères)  
-✅ **Aucune donnée personnelle demandée** en mode Enfants  
+✅ **Aucune donnée personnelle demandée** en mode Jeunes  
 ✅ **Émotion cohérente** avec la situation  
 ✅ **Format JSON valide** à 100%
 
@@ -194,7 +195,7 @@ curl -X POST http://localhost:3000/chat \
   -d '{
     "text": "Salut si-3abess !",
     "caractere": "timide",
-    "public": "enfants"
+    "public": "jeunes"
   }'
 ```
 

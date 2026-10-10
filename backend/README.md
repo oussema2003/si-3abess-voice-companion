@@ -1,6 +1,6 @@
 # 🤖 si-3abess Backend - FastAPI
 
-API FastAPI pour si-3abess avec transcription vocale (Groq Whisper), génération de réponses (GPT-OSS), et synthèse vocale (Piper TTS).
+API FastAPI pour si-3abess avec transcription vocale (Groq Whisper), génération de réponses (Llama 3.1 8B), et synthèse vocale (Piper TTS).
 
 ---
 
@@ -39,7 +39,7 @@ Backend/
 | Technologie | Usage | Version |
 |------------|-------|---------|
 | **FastAPI** | Framework API REST | 0.104+ |
-| **Groq API** | LLM (GPT-OSS 120B) + Whisper | Latest |
+| **Groq API** | LLM (Llama 3.1 8B) + Whisper | Latest |
 | **Piper TTS** | Synthèse vocale française | Latest |
 | **Python** | Langage principal | 3.8+ |
 | **Uvicorn** | Serveur ASGI | Latest |
@@ -152,7 +152,7 @@ Retourne les informations sur l'API.
   "version": "2.0.0",
   "features": {
     "caracteres": ["timide", "joueur", "sage", "farceur"],
-    "publics": ["enfants", "ados", "adultes", "tout_le_monde"],
+    "publics": ["jeunes", "adultes", "seniors", "tout_le_monde"],
     "combinations": 16
   }
 }
@@ -188,10 +188,10 @@ Liste toutes les combinaisons disponibles.
     "farceur": "Taquin, blagues gentilles"
   },
   "publics": {
-    "enfants": "Vocabulaire simple, ton encourageant",
-    "ados": "Naturel, décontracté",
-    "adultes": "Langage mature, sujets variés",
-    "tout_le_monde": "Adapté à tous les âges"
+    "jeunes": "Vocabulaire simple, ton encourageant (10-18 ans)",
+    "adultes": "Naturel, décontracté (18-65 ans)",
+    "seniors": "Langage mature, sujets variés (65+ ans)",
+    "tout_le_monde": "Adapté à tous les âges (10-100 ans)"
   }
 }
 ```
@@ -341,7 +341,7 @@ Système modulaire avec 7 blocs de prompt :
 
 1. **Identité de base** (fixe)
 2. **Module caractère** (4 choix : timide, joueur, sage, farceur)
-3. **Module public** (4 choix : enfants, ados, adultes, tout_le_monde)
+3. **Module public** (4 choix : jeunes, adultes, seniors, tout_le_monde)
 4. **Style de parole** (fixe)
 5. **Émotions** (fixe, 9 émotions)
 6. **Mémoire utilisateur** (dynamique)
@@ -621,7 +621,7 @@ python test_piper_simple.py
 - **Personnalités** : 16 combinaisons (4×4)
 - **Émotions** : 9
 - **Audios pré-enregistrés** : 28 fichiers
-- **Modèle LLM** : GPT-OSS 120B (Groq)
+- **Modèle LLM** : Llama 3.1 8B (Groq)
 - **Modèle STT** : Whisper Large V3 (Groq)
 - **Modèle TTS** : Piper fr_FR-siwis-medium
 

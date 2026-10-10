@@ -6,7 +6,10 @@
 # Dépendances Node
 node_modules/
 */node_modules/
-
+node_modules/
+.env
+*.wav
+piper/
 # Logs
 logs/
 *.log

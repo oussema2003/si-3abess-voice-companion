@@ -112,7 +112,7 @@ async def stream_chat_response(
     try:
         # Streaming du LLM
         stream = client.chat.completions.create(
-            model="openai/gpt-oss-120b",
+            model="llama-3.1-8b-instant",
             messages=messages,
             temperature=0.7,
             max_tokens=500,  # Augmenté pour permettre des discours plus longs

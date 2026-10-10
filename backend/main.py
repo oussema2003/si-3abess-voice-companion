@@ -440,10 +440,10 @@ async def chat(message: dict):
         # Ajouter le nouveau message
         messages.append({"role": "user", "content": user_message})
         
-        # Appeler Groq avec GPT-OSS 120B (modèle open-source puissant)
+        # Appeler Groq avec Llama 3.1 8B (modèle open-source rapide et puissant)
         try:
             completion = client.chat.completions.create(
-                model="openai/gpt-oss-120b",  # GPT open-source sur Groq
+                model="llama-3.1-8b-instant",  # Llama 3.1 8B via Groq
                 messages=messages,
                 temperature=0.7,
                 max_tokens=500,  # Augmenté pour permettre des réponses plus longues
@@ -457,7 +457,7 @@ async def chat(message: dict):
             if not response_text.strip().endswith('}'):
                 print(f"⚠️ Réponse JSON tronquée, nouvel essai...")
                 completion = client.chat.completions.create(
-                    model="openai/gpt-oss-120b",
+                    model="llama-3.1-8b-instant",
                     messages=messages,
                     temperature=0.6,  # Plus déterministe
                     max_tokens=500,  # Réponses plus longues

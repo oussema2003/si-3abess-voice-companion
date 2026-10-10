@@ -38,7 +38,7 @@
 ## 🎯 Présentation
 
 **si-3abess** est un robot compagnon vocal intelligent qui combine :
-- 🧠 **Intelligence artificielle** (Groq LLM)
+- 🧠 **Intelligence artificielle** (Llama 3.1 8B via Groq)
 - 🎤 **Reconnaissance vocale** (Whisper)
 - 🔊 **Synthèse vocale naturelle** (Piper TTS)
 - 😊 **9 expressions émotionnelles**
@@ -53,7 +53,7 @@ si-3abess peut avoir des **conversations longues et naturelles**, s'adapter à v
 
 ### 🎭 Système de Personnalité Modulaire
 - **4 caractères** : Timide, Joueur, Sage, Farceur
-- **4 publics** : Enfants, Ados, Adultes, Tout le monde
+- **4 publics** : Jeunes, Adultes, Seniors, Tout le monde
 - **16 combinaisons possibles** pour s'adapter à chaque utilisateur
 
 ### 😊 Système d'Émotions
@@ -266,11 +266,11 @@ si-3abess peut adopter 4 caractères différents pour s'adapter à vos préfére
 
 si-3abess adapte son langage et son comportement selon le public.
 
-### 1. 👶 Enfants (6-12 ans)
+### 1. 👶 Jeunes (10-18 ans)
 
 **Caractéristiques :**
-- 📚 **Vocabulaire** : Très simple et clair
-- 📝 **Phrases** : Très courtes (1-2 phrases maximum)
+- 📚 **Vocabulaire** : Simple et clair
+- 📝 **Phrases** : Courtes (1-3 phrases maximum)
 - 🎨 **Ton** : Doux, encourageant, patient
 - 🔒 **Sécurité renforcée** :
   - ❌ Aucun sujet effrayant/violent/adulte
@@ -282,7 +282,7 @@ si-3abess adapte son langage et son comportement selon le public.
 
 ---
 
-### 2. 🎒 Ados (13-17 ans)
+### 2. 🎒 Adultes (18-65 ans)
 
 **Caractéristiques :**
 - 📚 **Vocabulaire** : Naturel et décontracté
@@ -297,7 +297,7 @@ si-3abess adapte son langage et son comportement selon le public.
 
 ---
 
-### 3. 👔 Adultes (18+)
+### 3. 👔 Seniors (65+ ans)
 
 **Caractéristiques :**
 - 📚 **Vocabulaire** : Mature et varié
@@ -310,10 +310,10 @@ si-3abess adapte son langage et son comportement selon le public.
 
 ---
 
-### 4. 🌍 Tout le monde
+### 4. 🌍 Tout le monde (10-100 ans)
 
 **Caractéristiques :**
-- ⚙️ **Mode prudent** : Quand l'âge est inconnu
+- ⚙️ **Mode universel** : Pour tous les âges de 10 à 100 ans
 - 📚 **Vocabulaire** : Clair, simple, universel
 - 📝 **Contenu** : Adapté à un adolescent (niveau de sécurité)
 - ❌ **Pas de** : Sujets adultes, violents ou sensibles
@@ -367,7 +367,7 @@ si-3abess adapte son langage et son comportement selon le public.
 ┌──────────▼─────────┐  ┌──────▼────────────┐
 │   Groq API         │  │   Piper TTS       │
 │  • Whisper (STT)   │  │  • fr_FR-siwis    │
-│  • GPT-OSS (LLM)   │  │  • Synthèse local │
+│  • Llama 3.1 8B    │  │  • Synthèse local │
 └────────────────────┘  └───────────────────┘
 ```
 
@@ -412,7 +412,7 @@ si-3abess adapte son langage et son comportement selon le public.
 ### Étape 1 : Cloner le projet
 
 ```bash
-git clone https://github.com/votre-repo/si-3abess-robot.git
+git clone https://github.com/[VOTRE_USERNAME]/si-3abess-robot.git
 cd si-3abess-robot
 ```
 
@@ -536,7 +536,7 @@ Informations sur l'API.
   "version": "2.0.0",
   "features": {
     "caracteres": ["timide", "joueur", "sage", "farceur"],
-    "publics": ["enfants", "ados", "adultes", "tout_le_monde"],
+    "publics": ["jeunes", "adultes", "seniors", "tout_le_monde"],
     "combinations": 16
   }
 }
@@ -681,10 +681,10 @@ Liste toutes les combinaisons disponibles.
     "farceur": "Taquin, blagues gentilles"
   },
   "publics": {
-    "enfants": "Vocabulaire simple, ton encourageant",
-    "ados": "Naturel, décontracté",
-    "adultes": "Langage mature, sujets variés",
-    "tout_le_monde": "Adapté à tous les âges"
+    "jeunes": "Vocabulaire simple, ton encourageant (10-18 ans)",
+    "adultes": "Naturel, décontracté (18-65 ans)",
+    "seniors": "Langage mature, sujets variés (65+ ans)",
+    "tout_le_monde": "Adapté à tous les âges (10-100 ans)"
   }
 }
 ```
@@ -693,7 +693,7 @@ Liste toutes les combinaisons disponibles.
 
 ## 💬 Exemples de Conversations
 
-### Exemple 1 : Timide + Enfants
+### Exemple 1 : Timide + Jeunes
 
 **Utilisateur :** "Bonjour si-3abess !"  
 **si-3abess :** 😊 _"Euh... bonjour. Je suis content de te voir."_  
@@ -705,7 +705,7 @@ Liste toutes les combinaisons disponibles.
 
 ---
 
-### Exemple 2 : Joueur + Ados
+### Exemple 2 : Joueur + Adultes
 
 **Utilisateur :** "Salut, t'es qui ?"  
 **si-3abess :** 😄 _"Salut ! Moi c'est si-3abess, ton pote robot ! Prêt pour une super discussion ?"_  
@@ -717,7 +717,7 @@ Liste toutes les combinaisons disponibles.
 
 ---
 
-### Exemple 3 : Sage + Adultes
+### Exemple 3 : Sage + Seniors
 
 **Utilisateur :** "Comment fonctionnent les robots comme toi ?"  
 **si-3abess :** 💬 _"Les robots comme moi fonctionnent grâce à des circuits électroniques et des programmes informatiques. C'est un peu comme un cerveau, mais en version numérique. On peut apprendre, se souvenir de choses, et analyser les situations. Mon intelligence vient de modèles d'apprentissage qui ont été entraînés sur d'énormes quantités de données. C'est fascinant, vous ne trouvez pas ?"_  
@@ -912,13 +912,13 @@ git push origin feature/nouvelle-fonctionnalite
 
 ## 📄 Licence
 
-Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus de détails.
+Ce projet est un projet personnel. Pour toute utilisation, veuillez contacter l'auteur.
 
 ---
 
 ## 🙏 Remerciements
 
-- **Groq** pour leur API LLM rapide et gratuite
+- **Groq** pour leur API LLM rapide et gratuite (Llama 3.1 8B)
 - **Rhasspy Piper** pour la synthèse vocale française de qualité
 - **FastAPI** pour le framework web moderne
 - **OpenAI Whisper** (via Groq) pour la transcription vocale
@@ -927,10 +927,9 @@ Ce projet est sous licence **MIT**. Voir le fichier [LICENSE](LICENSE) pour plus
 
 ## 📞 Contact & Support
 
-- 📧 Email : support@si-3abess-robot.com
-- 💬 Discord : [Rejoindre notre serveur](https://discord.gg/si-3abess)
-- 🐛 Issues : [GitHub Issues](https://github.com/votre-repo/si-3abess-robot/issues)
-- 📖 Documentation : [Wiki complet](https://github.com/votre-repo/si-3abess-robot/wiki)
+Pour toute question ou assistance, vous pouvez :
+- 🐛 Ouvrir une issue : [GitHub Issues](https://github.com/[VOTRE_USERNAME]/si-3abess-robot/issues)
+- 📖 Consulter la documentation complète dans le dépôt
 
 ---
 
