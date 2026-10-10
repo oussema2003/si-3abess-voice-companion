@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>si-3abess - Assistant Vocal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="app">
+        <!-- Avatar de si-3abess -->
+        <div id="si-3abess-avatar" class="avatar" data-state="idle">
+            <img id="avatar-image" src="/assets/Repos.jpg" alt="si-3abess" class="avatar-image">
+            <div class="avatar-status">
+                <span id="status-text">En attente...</span>
+            </div>
+        </div>
+
+        <!-- Contrôles -->
+        <div class="controls">
+            <!-- Sélecteur de personnalité -->
+            <div class="personality-selector">
+                <div class="personality-group">
+                    <label class="personality-label">🎭 Caractère</label>
+                    <select id="caractere-select" class="personality-select">
+                        <option value="timide">Timide</option>
+                        <option value="joueur" selected>Joueur</option>
+                        <option value="sage">Sage</option>
+                        <option value="farceur">Farceur</option>
+                    </select>
+                </div>
+                <div class="personality-group">
+                    <label class="personality-label">👥 Public</label>
+                    <select id="public-select" class="personality-select">
+                        <option value="enfants">Enfants</option>
+                        <option value="ados">Ados</option>
+                        <option value="adultes">Adultes</option>
+                        <option value="tout_le_monde" selected>Tout le monde</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Sélecteur de mode vocal -->
+            <div class="mode-selector">
+                <label>
+                    <input type="radio" name="mode" value="push-to-talk" checked>
+                    <span>Push-to-talk</span>
+                </label>
+                <label>
+                    <input type="radio" name="mode" value="hands-free">
+                    <span>Mains libres (VAD)</span>
+                </label>
+            </div>
+
+            <!-- Configuration VAD (visible uniquement en mode mains libres) -->
+            <div id="vad-settings" class="vad-settings hidden">
+                <div class="vad-setting">
+                    <label for="volume-threshold">Sensibilité : <span id="threshold-value">30</span></label>
+                    <input type="range" id="volume-threshold" min="10" max="80" value="30">
+                </div>
+                <div class="vad-setting">
+                    <label for="silence-delay">Délai silence : <span id="delay-value">1.5</span>s</label>
+                    <input type="range" id="silence-delay" min="500" max="3000" step="100" value="1500">
+                </div>
+            </div>
+
+            <!-- Bouton principal -->
+            <button id="talk-button" class="talk-button">
+                <span class="button-icon">🎤</span>
+                <span class="button-text">Parler à si-3abess</span>
+            </button>
+            
+            <!-- Bouton réinitialiser -->
+            <button id="reset-button" class="reset-button" title="Nouvelle conversation">
+                🔄 Nouvelle conversation
+            </button>
+
+            <!-- Indicateur d'écoute -->
+            <div id="listening-indicator" class="listening-indicator hidden">
+                <div class="pulse"></div>
+                <span>J'écoute...</span>
+            </div>
+        </div>
+
+        <!-- Zone de transcription -->
+        <div class="transcript-area">
+            <div class="transcript-label">Transcription :</div>
+            <div id="transcript" class="transcript-content">
+                <p class="placeholder">La transcription apparaîtra ici...</p>
+            </div>
+        </div>
+
+        <!-- Zone de réponse -->
+        <div class="response-area">
+            <div class="response-label">si-3abess répond :</div>
+            <div id="response" class="response-content">
+                <p class="placeholder">La réponse de si-3abess apparaîtra ici...</p>
+            </div>
+        </div>
+
+        <!-- Indicateur de connexion -->
+        <div id="connection-status" class="connection-status online">
+            <span class="status-dot"></span>
+            <span id="connection-text">En ligne</span>
+        </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
