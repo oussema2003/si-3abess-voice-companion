@@ -412,7 +412,7 @@ si-3abess adapte son langage et son comportement selon le public.
 ### Étape 1 : Cloner le projet
 
 ```bash
-git clone https://github.com/[VOTRE_USERNAME]/si-3abess-robot.git
+git clone https://github.com/oussema2003/si-3abess-robot.git
 cd si-3abess-robot
 ```
 
@@ -928,7 +928,7 @@ Ce projet est un projet personnel. Pour toute utilisation, veuillez contacter l'
 ## 📞 Contact & Support
 
 Pour toute question ou assistance, vous pouvez :
-- 🐛 Ouvrir une issue : [GitHub Issues](https://github.com/[VOTRE_USERNAME]/si-3abess-robot/issues)
+- 🐛 Ouvrir une issue : [GitHub Issues](https://github.com/oussema2003/si-3abess-robot/issues)
 - 📖 Consulter la documentation complète dans le dépôt
 
 ---
