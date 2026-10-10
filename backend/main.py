@@ -440,10 +440,10 @@ async def chat(message: dict):
         # Ajouter le nouveau message
         messages.append({"role": "user", "content": user_message})
         
-        # Appeler Groq avec Llama 3.1 8B (modèle open-source rapide et puissant)
+        # Appeler Groq avec GPT-OSS (modèle open-source rapide et puissant)
         try:
             completion = client.chat.completions.create(
-                model="llama-3.1-8b-instant",  # Llama 3.1 8B via Groq
+                model="llama-3.1-8b-instant",  # GPT-OSS via Groq
                 messages=messages,
                 temperature=0.7,
                 max_tokens=500,  # Augmenté pour permettre des réponses plus longues

@@ -1,6 +1,6 @@
 # 🤖 si-3abess Backend - FastAPI
 
-API FastAPI pour si-3abess avec transcription vocale (Groq Whisper), génération de réponses (Llama 3.1 8B), et synthèse vocale (Piper TTS).
+API FastAPI pour si-3abess avec transcription vocale (Groq Whisper), génération de réponses (GPT-OSS), et synthèse vocale (Piper TTS).
 
 ---
 
@@ -39,7 +39,7 @@ Backend/
 | Technologie | Usage | Version |
 |------------|-------|---------|
 | **FastAPI** | Framework API REST | 0.104+ |
-| **Groq API** | LLM (Llama 3.1 8B) + Whisper | Latest |
+| **Groq API** | LLM (GPT-OSS) + Whisper | Latest |
 | **Piper TTS** | Synthèse vocale française | Latest |
 | **Python** | Langage principal | 3.8+ |
 | **Uvicorn** | Serveur ASGI | Latest |
@@ -621,7 +621,7 @@ python test_piper_simple.py
 - **Personnalités** : 16 combinaisons (4×4)
 - **Émotions** : 9
 - **Audios pré-enregistrés** : 28 fichiers
-- **Modèle LLM** : Llama 3.1 8B (Groq)
+- **Modèle LLM** : GPT-OSS (Groq)
 - **Modèle STT** : Whisper Large V3 (Groq)
 - **Modèle TTS** : Piper fr_FR-siwis-medium
 
