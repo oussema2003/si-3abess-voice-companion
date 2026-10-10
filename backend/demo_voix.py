@@ -10,7 +10,7 @@ print("\n" + "="*60)
 print("🎤 DÉMONSTRATION DES VOIX DE si-3abess")
 print("="*60 + "\n")
 
-# Créer un dossier pour les démos
+# Créer un dGPT-OSSier pour les démos
 os.makedirs("demo_audio", exist_ok=True)
 
 # Phrases de démonstration pour chaque caractère

@@ -1,6 +1,6 @@
 # Le Cerveau de si-3abess 🧠
 
-Ce document explique comment fonctionne le cerveau de si-3abess, basé sur Llama 3.3 70B via Groq.
+Ce document explique comment fonctionne le cerveau de si-3abess, basé sur Llama 3.1 8B via Groq.
 
 ## Architecture
 
@@ -92,7 +92,7 @@ Reçoit : prénom, centres d'intérêt, souvenirs récents. Utilise naturellemen
 
 | Paramètre | Valeur | Raison |
 |-----------|--------|--------|
-| Modèle | llama-3.3-70b-versatile | Meilleur compromis qualité/vitesse |
+| Modèle | llama-3.1-8b-instant | Modèle rapide et performant |
 | Température | 0.7 | Personnalité sans dérapage |
 | Max tokens | 150 | Force la brièveté |
 | Response format | JSON | Garantit le format |
@@ -203,7 +203,7 @@ python test_si-3abess.py
 
 ## Version
 
-**v1.0** - Implémentation initiale avec Llama 3.3 70B
+**v1.0** - Implémentation initiale avec Llama 3.1 8B
 - Format JSON
 - 5 émotions
 - Détection d'humeur
