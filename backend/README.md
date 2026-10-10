@@ -621,7 +621,7 @@ python test_piper_simple.py
 - **Personnalités** : 16 combinaisons (4×4)
 - **Émotions** : 9
 - **Audios pré-enregistrés** : 28 fichiers
-- **Modèle LLM** : GPT-OSS (Groq)
+- **Modèle LLM** : Llama 3.1 8B(Groq)
 - **Modèle STT** : Whisper Large V3 (Groq)
 - **Modèle TTS** : Piper fr_FR-siwis-medium
 

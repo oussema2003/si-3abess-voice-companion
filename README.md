@@ -38,7 +38,7 @@
 ## 🎯 Présentation
 
 **si-3abess** est un robot compagnon vocal intelligent qui combine :
-- 🧠 **Intelligence artificielle** (GPT-OSS via Groq)
+- 🧠 **Intelligence artificielle** (Llama 3.1 8Bvia Groq)
 - 🎤 **Reconnaissance vocale** (Whisper)
 - 🔊 **Synthèse vocale naturelle** (Piper TTS)
 - 😊 **9 expressions émotionnelles**
@@ -367,7 +367,7 @@ si-3abess adapte son langage et son comportement selon le public.
 ┌──────────▼─────────┐  ┌──────▼────────────┐
 │   Groq API         │  │   Piper TTS       │
 │  • Whisper (STT)   │  │  • fr_FR-siwis    │
-│  • GPT-OSS    │  │  • Synthèse local │
+│  • Llama 3.1 8B   │  │  • Synthèse local │
 └────────────────────┘  └───────────────────┘
 ```
 
