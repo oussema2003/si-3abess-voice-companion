@@ -918,7 +918,7 @@ Ce projet est un projet personnel. Pour toute utilisation, veuillez contacter l'
 
 ## 🙏 Remerciements
 
-- **Groq** pour leur API LLM rapide et gratuite (GPT-OSS)
+- **Groq** pour leur API LLM rapide et gratuite (Llama 3.1 8B)
 - **Rhasspy Piper** pour la synthèse vocale française de qualité
 - **FastAPI** pour le framework web moderne
 - **OpenAI Whisper** (via Groq) pour la transcription vocale
